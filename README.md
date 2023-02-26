@@ -1,6 +1,6 @@
 #### news
 
-Program Sederhana Untuk Berita Terbaru.
+Program Sederhana Tampilkan Berita Terbaru.
 
 #### Cara Menggunakan
 1. Install setup.py
