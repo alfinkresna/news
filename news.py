@@ -32,13 +32,18 @@ class News:
             data['link'] = post.link
             news.append(data)
         return news
+        
+    @staticmethod
+    def get_sources():
+    	with open('system/sources.yml', 'r') as f:
+    	   sources = safe_load(f)
+    	return sources
 
     @staticmethod
     def kemenkumham():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tKemenkumham")
+        sources = News.get_sources()
         url = sources['kemenkumham']
         news = News(url)
         for item in news.news:
@@ -51,9 +56,8 @@ class News:
     @staticmethod
     def antaranews_hukum():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tAntaranews (Hukum)")
+        sources = News.get_sources()
         url = sources['antaranews_hukum']
         news = News(url)
         for item in news.news:
@@ -66,9 +70,8 @@ class News:
     @staticmethod
     def antaranews_politik():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tAntaranews (Politik)")
+        sources = News.get_sources()
         url = sources['antaranews_politik']
         news = News(url)
         for item in news.news:
@@ -81,9 +84,8 @@ class News:
     @staticmethod
     def antaranews_kriminalitas():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tAntaranews (Kriminalitas)")
+        sources = News.get_sources()
         url = sources['antaranews_kriminalitas']
         news = News(url)
         for item in news.news:
@@ -96,9 +98,8 @@ class News:
     @staticmethod
     def vice_indonesia():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tVice Indonesia")
+        sources = News.get_sources()
         url = sources['vice_indonesia']
         news = News(url)
         for item in news.news:
@@ -111,9 +112,8 @@ class News:
     @staticmethod
     def cnn_indonesia():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tCNN Indonesia")
+        sources = News.get_sources()
         url = sources['cnn_indonesia']
         news = News(url)
         for item in news.news:
@@ -126,9 +126,8 @@ class News:
     @staticmethod
     def cnbc_indonesia():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tCNBC Indonesia")
+        sources = News.get_sources()
         url = sources['cnbc_indonesia']
         news = News(url)
         for item in news.news:
@@ -141,9 +140,8 @@ class News:
     @staticmethod
     def cyware_cybersecurity():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tCyware (Cybersecurity)")
+        sources = News.get_sources()
         url = sources['cyware_cybersecurity']
         news = News(url)
         for item in news.news:
@@ -156,9 +154,8 @@ class News:
     @staticmethod
     def f5_threats():
         system_clear()
-        with open('system/sources.yml', 'r') as f:
-             sources = safe_load(f)
         print("\n\t\tF5 (Threats)")
+        sources = News.get_sources()
         url = sources['f5_threats']
         news = News(url)
         for item in news.news:
