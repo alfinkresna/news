@@ -42,10 +42,10 @@ class News:
     @staticmethod
     def print_news(news, border):
         for item in news:
-            print('\u000AJudul :', item['title'])
-            print('\u000ATanggal :', item['date'])
-            print('\u000AKonten :', item['content'])
-            print('\u000ALink :', item['link'])
+            print('\nJudul :', item['title'])
+            print('\nTanggal :', item['date'])
+            print('\nKonten :', item['content'])
+            print('\nLink :', item['link'])
             print(border)
             
     @staticmethod
